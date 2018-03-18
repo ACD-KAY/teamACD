@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.teamacd.demo.Activity_07">
+<?xml version="1.0" encoding="utf-8"?><android.support.constraint.ConstraintLayout    xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"    android:layout_height="match_parent" tools:context="com.example.a10342.a7.MainActivity">
+    <TextView        android:layout_width="wrap_content"        android:layout_height="22dp"        android:textSize="20dp"        android:text="会议详情"        app:layout_constraintBottom_toBottomOf="parent"        app:layout_constraintLeft_toLeftOf="parent"        app:layout_constraintRight_toRightOf="parent"        app:layout_constraintTop_toTopOf="parent"        app:layout_constraintVertical_bias="0.00" />    />
+    <RadioButton        android:id="@+id/rb2"        android:gravity="center"        android:button="@null"        android:layout_width="100dp"        android:layout_height="500dp"        android:text="评论"        android:textSize="20sp"        app:layout_constraintBottom_toBottomOf="parent"        app:layout_constraintLeft_toLeftOf="parent"        app:layout_constraintRight_toRightOf="parent"        app:layout_constraintTop_toTopOf="parent"        app:layout_constraintVertical_bias="0.0"        app:layout_constraintHorizontal_bias="0.320" />    />    <RadioButton        android:id="@+id/rb1"        android:gravity="center"        android:button="@null"        android:layout_width="100dp"        android:layout_height="500dp"        android:text="详情"        android:textSize="20sp"        />    <RadioButton        android:id="@+id/rb3"        android:gravity="center"        android:button="@null"        android:layout_width="100dp"        android:layout_height="500dp"        android:text="成员"        android:textSize="20sp"        app:layout_constraintBottom_toBottomOf="parent"        app:layout_constraintLeft_toLeftOf="parent"        app:layout_constraintRight_toRightOf="parent"        app:layout_constraintTop_toTopOf="parent"        app:layout_constraintVertical_bias="0.0"        app:layout_constraintHorizontal_bias="0.640" />    />    <RadioButton        android:id="@+id/rb4"        android:gravity="center"        android:button="@null"        android:layout_width="100dp"        android:layout_height="500dp"        android:text="现场"        android:textSize="20sp"        app:layout_constraintBottom_toBottomOf="parent"        app:layout_constraintLeft_toLeftOf="parent"        app:layout_constraintRight_toRightOf="parent"        app:layout_constraintTop_toTopOf="parent"        app:layout_constraintVertical_bias="0.0"        app:layout_constraintHorizontal_bias="0.960" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+
