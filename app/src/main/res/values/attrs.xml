@@ -20,4 +20,7 @@
         <!--背景-->
         <attr name="barBackground" format="reference|color"/>
     </declare-styleable>
+    <declare-styleable name="StepsViewIndicator">
+        <attr name="numOfSteps" format="integer" />
+    </declare-styleable>
 </resources>
