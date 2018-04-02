@@ -1,30 +1,39 @@
 package com.teamacd.demo;
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.MenuInflater;
 import android.content.Context;
+import com.anton46.stepsview.StepsView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-public class Activity_07 extends AppCompatActivity {
 
-public class meeting_Activity_7 extends AppCompatActivity {
+public class Activity_07 extends AppCompatActivity {
+    
+    private final String[] views = {"View 1", "View 2", "View 3", "View 4", "View 5", "View 6",
+
+            "View 7", "View 8", "View 9", "View 10", "View 11", "View 12"};
+
+
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meeting__7);
+
+        setContentView(R.layout.activity_main);
+
+
 
         ListView mListView = (ListView) findViewById(R.id.list);
 
-   MyAdapter adapter = new MyAdapter(this, 0);
+
+
+        MyAdapter adapter = new MyAdapter(this, 0);
 
         adapter.addAll(views);
 
@@ -33,85 +42,95 @@ public class meeting_Activity_7 extends AppCompatActivity {
         mListView.setAdapter(adapter);
 
 
-        public static class MyAdapter extends ArrayAdapter<String> {
+
+    }
 
 
 
-            private final String[] labels = {"报名", "签到", "结束"};
+    public static class MyAdapter extends ArrayAdapter<String> {
 
 
 
-            public MyAdapter(Context context, int resource) {
-
-                super(context, resource);
-
-            }
+        private final String[] labels = {"报名", "签到", "结束"};
 
 
 
-            @Override
+        public MyAdapter(Context context, int resource) {
 
-            public View getView(int position, View convertView, ViewGroup parent) {
+            super(context, resource);
 
-                ViewHolder holder;
-
-                if (convertView == null) {
-
-                    convertView = LayoutInflater.from(getContext()).inflate(R.layout.row, null);
-
-                    holder = new ViewHolder(convertView);
-
-                    convertView.setTag(holder);
-
-                } else {
-
-                    holder = (ViewHolder) convertView.getTag();
-
-                }
+        }
 
 
 
-                holder.mLabel.setText(getItem(position));
+        @Override
 
+        public View getView(int position, View convertView, ViewGroup parent) {
 
+            ViewHolder holder;
 
-                holder.mStepsView.setCompletedPosition(position % labels.length)
-                        .setLabels(labels)
+            if (convertView == null) {
 
-                        .setBarColorIndicator(0xFF888888)
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.row, null);
 
-                        .setProgressColorIndicator(0xFF05A9F4)
+                holder = new ViewHolder(convertView);
 
-                        .setLabelColorIndicator(0xFF888888)
+                convertView.setTag(holder);
 
-                        .drawView();
+            } else {
 
-
-
-                return convertView;
+                holder = (ViewHolder) convertView.getTag();
 
             }
 
 
 
-            static class ViewHolder {
+            holder.mLabel.setText(getItem(position));
 
 
 
-                TextView mLabel;
+            holder.mStepsView.setCompletedPosition(position % labels.length)
 
-                StepsView mStepsView;
+                    .setLabels(labels)
+
+                    .setBarColorIndicator( getContext().getResources().getColor(R.color.material_blue_grey_800))
+
+                    .setProgressColorIndicator(getContext().getResources().getColor(R.color.orange))
+
+                    .setLabelColorIndicator(getContext().getResources().getColor(R.color.orange))
+
+                    .drawView();
 
 
 
-                public ViewHolder(View view) {
+            return convertView;
 
-                    mLabel = (TextView) view.findViewById(R.id.label);
+        }
 
-                    mStepsView = (StepsView) view.findViewById(R.id.stepsView);
 
-                }
+
+        static class ViewHolder {
+
+
+
+            TextView mLabel;
+
+            StepsView mStepsView;
+
+
+
+            public ViewHolder(View view) {
+
+                mLabel = (TextView) view.findViewById(R.id.label);
+
+                mStepsView = (StepsView) view.findViewById(R.id.stepsView);
 
             }
 
         }
+
+    }
+
+
+
+}
