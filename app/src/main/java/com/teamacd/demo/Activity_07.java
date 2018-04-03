@@ -132,5 +132,4 @@ public class Activity_07 extends AppCompatActivity {
     }
 
 
-
 }
