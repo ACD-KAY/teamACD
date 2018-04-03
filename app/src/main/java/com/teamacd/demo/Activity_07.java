@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
 public class Activity_07 extends AppCompatActivity {
     
     private final String[] views = {"View 1", "View 2", "View 3", "View 4", "View 5", "View 6",
